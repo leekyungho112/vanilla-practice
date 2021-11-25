@@ -8,6 +8,10 @@
 const $ = (selector) => document.querySelector(selector);
 
 function App() {
+  const updateCountMenu = () => {
+    const menuCount = $('#espresso-menu-list').querySelectorAll('li').length;
+    $('.menu-count').innerText = `총 ${menuCount} 개`;
+  };
   const addMenuName = () => {
     if ($('#espresso-menu-name').value === '') {
       return;
@@ -37,11 +41,20 @@ function App() {
       'beforeend',
       menuItemTemplate(espressoMenuName)
     );
-    const menuCount = $('#espresso-menu-list').querySelectorAll('li').length;
-    $('.menu-count').innerText = `총 ${menuCount} 개`;
+    updateCountMenu();
     $('#espresso-menu-name').value = '';
   };
-
+  const editMenuName = (e) => {
+    const $menuName = e.target.closest('li').querySelector('.menu-name');
+    const menuName = $menuName.innerText;
+    const updatedMenuName = prompt('수정하시겠습니까?', menuName);
+    $menuName.innerText = updatedMenuName;
+  };
+  const deleteMenuName = (e) => {
+    const $menuName = e.target.closest('li');
+    $menuName.remove();
+    updateCountMenu();
+  };
   $('#espresso-menu-form').addEventListener('submit', (e) => {
     e.preventDefault();
   });
@@ -52,16 +65,15 @@ function App() {
     }
     addMenuName();
   });
-  $('#espresso-menu-submit-button').addEventListener('click', () => {
-    addMenuName();
-  });
+  $('#espresso-menu-submit-button').addEventListener('click', addMenuName);
   $('#espresso-menu-list').addEventListener('click', (e) => {
     const targetEdit = e.target.classList.contains('menu-edit-button');
+    const targetDelete = e.target.classList.contains('menu-remove-button');
     if (targetEdit) {
-      const $menuName = e.target.closest('li').querySelector('.menu-name');
-      const menuName = $menuName.innerText;
-      const updatedMenuName = prompt('수정하시겠습니까?', menuName);
-      $menuName.innerText = updatedMenuName;
+      editMenuName(e);
+    }
+    if (targetDelete) {
+      deleteMenuName(e);
     }
   });
 }
