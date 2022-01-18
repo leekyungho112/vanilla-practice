@@ -61,14 +61,34 @@ console.log(firstName);
 
 // 템플릿리터럴
 
-const firstName = 'Lee';
-const job = 'programmer';
-const birthDay = 1987;
-const year = 2037;
-const lee =
-  "I'm " + firstName + ', a ' + (year - birthDay) + ' years old ' + job + '!';
+// const firstName = 'Lee';
+// const job = 'programmer';
+// const birthDay = 1987;
+// const year = 2037;
+// const lee =
+//   "I'm " + firstName + ', a ' + (year - birthDay) + ' years old ' + job + '!';
 
-const leeNew = `I'm ${firstName}, a ${year - birthDay} years old ${job} !`;
+// const leeNew = `I'm ${firstName}, a ${year - birthDay} years old ${job} !`;
 
-console.log(lee);
-console.log(leeNew);
+// console.log(lee);
+// console.log(leeNew);
+
+// if else
+
+// const age = 18;
+
+// if (age >= 18) {
+//   console.log('ok you are driving license');
+// } else {
+//   console.log('No you are kid!!');
+// }
+
+const birthDay = 1988;
+
+let century;
+if (birthDay <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
