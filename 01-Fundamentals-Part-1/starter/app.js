@@ -58,3 +58,17 @@ console.log(firstName);
 
 // const markHigherBMI = markBMI > johnBMI;
 // console.log(markHigherBMI);
+
+// 템플릿리터럴
+
+const firstName = 'Lee';
+const job = 'programmer';
+const birthDay = 1987;
+const year = 2037;
+const lee =
+  "I'm " + firstName + ', a ' + (year - birthDay) + ' years old ' + job + '!';
+
+const leeNew = `I'm ${firstName}, a ${year - birthDay} years old ${job} !`;
+
+console.log(lee);
+console.log(leeNew);
