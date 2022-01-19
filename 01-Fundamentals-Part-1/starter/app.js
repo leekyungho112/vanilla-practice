@@ -83,12 +83,36 @@ console.log(firstName);
 //   console.log('No you are kid!!');
 // }
 
-const birthDay = 1988;
+// const birthDay = 1988;
 
-let century;
-if (birthDay <= 2000) {
-  century = 20;
+// let century;
+// if (birthDay <= 2000) {
+//   century = 20;
+// } else {
+//   century = 21;
+// }
+// console.log(century);
+
+// Quiz
+const markWeight = 78;
+const markHeight = 1.69;
+const johnWeight = 92;
+const johnHeight = 1.95;
+
+const markBMI = markWeight / markHeight ** 2;
+const johnBMI = johnWeight / johnHeight ** 2;
+
+if (markBMI > johnBMI) {
+  console.log(`Mark's BMI (${markBMI}) is higher than John's`);
 } else {
-  century = 21;
+  console.log(`John's BMI (${johnBMI}) is higher than Mark's`);
 }
-console.log(century);
+
+// Type Conversion and Coercion
+
+const inputYear = '1991';
+
+console.log(Number(inputYear), inputYear);
+console.log(Number('lee')); // NaN
+console.log(typeof NaN); //number
+console.log(String(23), 23);
