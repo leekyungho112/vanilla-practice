@@ -94,25 +94,66 @@ console.log(firstName);
 // console.log(century);
 
 // Quiz
-const markWeight = 78;
-const markHeight = 1.69;
-const johnWeight = 92;
-const johnHeight = 1.95;
+// const markWeight = 78;
+// const markHeight = 1.69;
+// const johnWeight = 92;
+// const johnHeight = 1.95;
 
-const markBMI = markWeight / markHeight ** 2;
-const johnBMI = johnWeight / johnHeight ** 2;
+// const markBMI = markWeight / markHeight ** 2;
+// const johnBMI = johnWeight / johnHeight ** 2;
 
-if (markBMI > johnBMI) {
-  console.log(`Mark's BMI (${markBMI}) is higher than John's`);
-} else {
-  console.log(`John's BMI (${johnBMI}) is higher than Mark's`);
-}
+// if (markBMI > johnBMI) {
+//   console.log(`Mark's BMI (${markBMI}) is higher than John's`);
+// } else {
+//   console.log(`John's BMI (${johnBMI}) is higher than Mark's`);
+// }
 
-// Type Conversion and Coercion
+// Type Conversion
 
-const inputYear = '1991';
+// const inputYear = '1991';
 
-console.log(Number(inputYear), inputYear);
-console.log(Number('lee')); // NaN
-console.log(typeof NaN); //number
-console.log(String(23), 23);
+// console.log(Number(inputYear), inputYear);
+// console.log(Number('lee')); // NaN
+// console.log(typeof NaN); //number
+// console.log(String(23), 23);
+
+// Type coercion
+// 문자열에 대한 강제 형변환을 유발한다
+// console.log('I am ' + 23 + ' years old');
+
+// let n = '1' + 1; // '11'
+// n = n - 1; // 강제 형병환
+// console.log(n);
+
+// 5 falsy values: 0 , '', undefined, null, NaN
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean('Lee'));
+// console.log(Boolean({}));
+
+// const money = 0;
+// if (money) {
+//   console.log("Don't spend it all");
+// } else {
+//   console.log('You should get a job');
+// }
+
+// let height;
+// if (height) {
+//   console.log('Yes');
+// } else {
+//   console.log('No');
+// }
+
+// == or ===
+// === type까지 비교를 한다 강제 형병환을 유발하지 않고 비교
+// == 강제 형병환이 일어나 비교 하게된다 10 == '10' true
+const age = 10;
+if (age === 10) console.log('10years old');
+
+// boolean logic
+
+const hasDriverLicense = true;
+const hasGoodVision = false;
+
+console.log(hasDriverLicense && !hasGoodVision);
