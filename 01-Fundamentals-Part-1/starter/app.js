@@ -148,12 +148,62 @@ console.log(firstName);
 // == or ===
 // === type까지 비교를 한다 강제 형병환을 유발하지 않고 비교
 // == 강제 형병환이 일어나 비교 하게된다 10 == '10' true
-const age = 10;
-if (age === 10) console.log('10years old');
+// const age = 10;
+// if (age === 10) console.log('10years old');
 
 // boolean logic
 
-const hasDriverLicense = true;
-const hasGoodVision = false;
+// const hasDriverLicense = true;
+// const hasGoodVision = false;
 
-console.log(hasDriverLicense && !hasGoodVision);
+// console.log(hasDriverLicense && hasGoodVision);
+// console.log(hasDriverLicense || hasGoodVision);
+
+//Quiz 3
+
+// const dolphins = (96 + 108 + 89) / 3;
+// const koalas = (88 + 91 + 110) / 3;
+
+// if (dolphins > koalas) {
+//   console.log('Dolphin Win');
+// } else if (koalas > dolphins) {
+//   console.log('Koalas Win');
+// } else {
+//   console.log('both win ');
+// }
+
+// const dolphins = (97 + 112 + 101) / 3;
+// const koalas = (109 + 95 + 123) / 3;
+// console.log(dolphins, koalas);
+// if (dolphins > koalas && dolphins >= 100) {
+//   console.log('Dolphin Win');
+// } else if (koalas > dolphins && koalas >= 100) {
+//   console.log('Koalas Win');
+// } else {
+//   console.log('both win ');
+// }
+
+// Switch
+
+const day = 'tue';
+switch (day) {
+  case 'mon':
+    console.log('monday');
+    break;
+  case 'tue':
+    console.log('Tuesday');
+    break;
+  default:
+    console.log('Not a valid day');
+    break;
+}
+
+if (day === 'mon') {
+  console.log('monday');
+} else if (day === 'tue') {
+  console.log('tuesday');
+} else if (day === 'wed') {
+  console.log('wednesday');
+} else {
+  console.log('Not a valid day');
+}
