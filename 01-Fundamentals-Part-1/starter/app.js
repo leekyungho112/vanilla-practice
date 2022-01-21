@@ -185,25 +185,33 @@ console.log(firstName);
 
 // Switch
 
-const day = 'tue';
-switch (day) {
-  case 'mon':
-    console.log('monday');
-    break;
-  case 'tue':
-    console.log('Tuesday');
-    break;
-  default:
-    console.log('Not a valid day');
-    break;
-}
+// const day = 'tue';
+// switch (day) {
+//   case 'mon':
+//     console.log('monday');
+//     break;
+//   case 'tue':
+//     console.log('Tuesday');
+//     break;
+//   default:
+//     console.log('Not a valid day');
+//     break;
+// }
 
-if (day === 'mon') {
-  console.log('monday');
-} else if (day === 'tue') {
-  console.log('tuesday');
-} else if (day === 'wed') {
-  console.log('wednesday');
-} else {
-  console.log('Not a valid day');
-}
+// if (day === 'mon') {
+//   console.log('monday');
+// } else if (day === 'tue') {
+//   console.log('tuesday');
+// } else if (day === 'wed') {
+//   console.log('wednesday');
+// } else {
+//   console.log('Not a valid day');
+// }
+
+// Quiz 4
+
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(
+  `The bill was ${bill} the tip ${tip} and the total value ${bill + tip}`
+);
